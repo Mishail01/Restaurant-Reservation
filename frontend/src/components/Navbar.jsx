@@ -1,13 +1,15 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { data } from "../restApi.json";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
+  // eslint-disable-next-line no-undef
   const [show, setShow] = useState(false);
   return (
     <>
       <nav>
-        <div className="logo">ZEESH</div>
+        <div className="logo">MISHAIL</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {data[0].navbarLinks.map((element) => (
@@ -24,8 +26,8 @@ const Navbar = () => {
           </div>
           <button className="menuBtn">OUR MENU</button>
         </div>
-        <div className="hamburger" onClick={()=> setShow(!show)}>
-                <GiHamburgerMenu/>
+        <div className="hamburger" onClick={() => setShow(!show)}>
+          <GiHamburgerMenu />
         </div>
       </nav>
     </>
